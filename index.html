@@ -10,6 +10,8 @@
 </head>
 <body>
   <h2>Wash Abb - Water Management System</h2>
+  
+
 
   <label for="phone">Phone Number:</label><br>
   <input type="tel" id="phone" placeholder="+92XXXXXXXXXX"><br><br>
@@ -24,16 +26,19 @@
   <div id="order-section" style="display:none;">
     <h3>Place Water Order</h3>
 
-    <label for="type">Select Bottle Type:</label><br>
-    <select id="type">
-      <option value="250ml">250 ml Bottle</option>
-      <option value="1liter">1 Liter Bottle</option>
-      <option value="18liter">19 Liter Gallon</option>
-      <option value="refill">Refill</option>
-    </select><br><br>
+    <label>250 ml Bottle Quantity:</label><br>
+    <input type="number" id="qty-250ml" min="0" value="0"><br><br>
 
-    <label for="quantity">Quantity:</label><br>
-    <input type="number" id="quantity" placeholder="Quantity"><br><br>
+    <label>1 Liter Bottle Quantity:</label><br>
+    <input type="number" id="qty-1liter" min="0" value="0"><br><br>
+
+    <label>19 Liter Gallon Quantity:</label><br>
+    <input type="number" id="qty-18liter" min="0" value="0"><br><br>
+
+    <label>19 Liter Gallon Refill Quantity:</label><br>
+    <input type="number" id="qty-refill-18liter" min="0" value="0"><br><br>
+
+    <p style="text-align: center; color: yellow;"><strong>Total Price:</strong> Rs <span id="total-price">0</span></p>
 
     <button onclick="placeOrder()">Submit</button><br><br>
     <a href="orders.html">My Orders</a>
